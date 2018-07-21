@@ -17,11 +17,11 @@ do {
 		param([string] $result)
 
 		if ([string]::IsNullOrWhiteSpace($result)) {
-			Write-Host "Empty result $([datetime]::Now) "
+			Write-Host "Empty answer $([datetime]::Now) "
 		}
 		elseif ($global:prevResult -eq [string]::Empty) {
 			$global:prevResult = $result
-			Write-Host "Save result $([datetime]::Now) "
+			Write-Host "First answer $([datetime]::Now) "
 		}
 		elseif (![string]::Equals($global:prevResult, $result)) {
 			Write-Host "Changed $([datetime]::Now) "
