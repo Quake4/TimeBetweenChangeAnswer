@@ -11,6 +11,8 @@ param(
 
 . .\Get-Http.ps1
 
+[console]::Title = "Test: $Url every $Timeout sec"
+
 [string] $global:prevResult = [string]::Empty
 do {
 	Get-Http $Url {
